@@ -1,17 +1,15 @@
 {%  extends 'accounts/main.html' %}
-
 {% block content %}
-
 {%  include 'accounts/status.html' %}
 
 <br>
-
 <div class="row">
 	<div class="col-md-5">
 		<h5>CUSTOMERS:</h5>
+
 		<hr>
+
 		<div class="card card-body">
-			<a class="btn btn-primary  btn-sm btn-block" href="">Create Customer</a>
 			<table class="table table-sm">
 				<tr>
 					<th></th>
@@ -26,16 +24,16 @@
 						<td>{{customer.phone}}</td>
 					</tr>
 				{% endfor %}
-
 			</table>
 		</div>
 	</div>
 
 	<div class="col-md-7">
 		<h5>LAST 5 ORDERS</h5>
+
 		<hr>
-		<div class="card card-body">
-			
+
+		<div class="card card-body">			
 			<table class="table table-sm">
 				<tr>
 					<th>Product</th>
@@ -53,16 +51,11 @@
 						<td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
 
 						<td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
-
 					</tr>
-				{% endfor %}
-
-		
+				{% endfor %}		
 			</table>
 		</div>
 	</div>
-
 </div>
 
 {% endblock %}
-
