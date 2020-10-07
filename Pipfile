@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 django = "*"
 django-filter = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"
